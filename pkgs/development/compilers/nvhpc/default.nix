@@ -5,6 +5,7 @@
 , libkrb5
 , zlib
 , xorg
+, libxkbcommon
 }:
 
 let
@@ -20,8 +21,8 @@ stdenv.mkDerivation rec {
     sha256 = "1xdg6nj8r1si99wjfaqp1nc3mq77yg0cbm95drlxw655cwbqbs8r";
   };
 
-  nativeBuildInputs = [ autoPatchelfHook ];
-  buildInputs = [ libkrb5 zlib libxkbcommon ] ++ with xorg; [ libxcb xcbutilkeysyms libX11 ];
+  #nativeBuildInputs = [ autoPatchelfHook ];
+  buildInputs =  [ xorg.libxcb xorg.xcbutilkeysyms xorg.libX11 libkrb5 zlib libxkbcommon ];
 
   installPhase = ''
     runHook preInstall
