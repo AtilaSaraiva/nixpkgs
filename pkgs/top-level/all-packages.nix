@@ -7225,6 +7225,8 @@ with pkgs;
 
   jsvc = callPackage ../tools/system/jsvc { };
 
+  junction = callPackage ../tools/misc/junction { };
+
   junkie = callPackage ../tools/networking/junkie { };
 
   just = callPackage ../development/tools/just { };
