@@ -19691,6 +19691,8 @@ with pkgs;
       ] ++ additionalPaths;
     };
 
+  nvhpc = callPackage ../development/compilers/nvhpc { };
+
   nvidia-docker = mkNvidiaContainerPkg {
     name = "nvidia-docker";
     containerRuntimePath = "${docker}/libexec/docker/runc";
