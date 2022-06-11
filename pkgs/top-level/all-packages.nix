@@ -27775,6 +27775,8 @@ with pkgs;
 
   leo-editor = libsForQt5.callPackage ../applications/editors/leo-editor { };
 
+  lfortran = callPackage ../development/compilers/lfortran { };
+
   libowfat = callPackage ../development/libraries/libowfat { };
 
   libowlevelzs = callPackage ../development/libraries/libowlevelzs { };
