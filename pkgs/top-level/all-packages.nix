@@ -6018,6 +6018,8 @@ with pkgs;
 
   fpm = callPackage ../tools/package-management/fpm { };
 
+  fortran-fpm = callPackage ../development/tools/build-managers/fortran-fpm { };
+
   fprintd = callPackage ../tools/security/fprintd { };
 
   fprintd-tod = callPackage ../tools/security/fprintd/tod.nix { };
