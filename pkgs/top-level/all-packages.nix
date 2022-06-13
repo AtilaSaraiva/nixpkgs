@@ -10843,6 +10843,8 @@ with pkgs;
 
   termplay = callPackage ../tools/misc/termplay { };
 
+  test-drive = callPackage ../development/libraries/test-drive { };
+
   tetrd = callPackage ../applications/networking/tetrd { };
 
   tewisay = callPackage ../tools/misc/tewisay { };
