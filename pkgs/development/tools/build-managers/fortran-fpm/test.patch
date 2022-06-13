@@ -1,0 +1,25 @@
+diff --git a/fpm.toml b/fpm.toml
+index 7289c823..0d88d108 100644
+--- a/fpm.toml
++++ b/fpm.toml
+@@ -5,14 +5,12 @@ author = "fpm maintainers"
+ maintainer = ""
+ copyright = "2020 fpm contributors"
+ 
+-[dependencies]
+-[dependencies.toml-f]
+-git = "https://github.com/toml-f/toml-f"
+-rev = "2f5eaba864ff630ba0c3791126a3f811b6e437f3"
++[build]
++link = "toml-f"
++
+ 
+-[dependencies.M_CLI2]
+-git = "https://github.com/urbanjost/M_CLI2.git"
+-rev = "ea6bbffc1c2fb0885e994d37ccf0029c99b19f24"
++[dependencies]
++M_CLI2 = { path = "M_CLI2" }
+ 
+ [[test]]
+ name = "cli-test"
+
