@@ -1,0 +1,14 @@
+diff --git a/meson.build b/meson.build
+index 6f0a378..7a8dfad 100644
+--- a/meson.build
++++ b/meson.build
+@@ -61,7 +61,7 @@ if install
+ 
+   module_id = meson.project_name() / fc_id + '-' + fc.version()
+   meson.add_install_script(
+-    find_program(files('config'/'install-mod.py')),
++    find_program('config/install-mod.py'),
+     get_option('includedir') / module_id,
+   )
+ 
+
