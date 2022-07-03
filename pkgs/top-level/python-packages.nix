@@ -4759,6 +4759,8 @@ in {
 
   kubernetes = callPackage ../development/python-modules/kubernetes { };
 
+  kubernetes-asyncio = callPackage ../development/python-modules/kubernetes-asyncio { };
+
   labelbox = callPackage ../development/python-modules/labelbox { };
 
   labgrid = callPackage ../development/python-modules/labgrid { };
