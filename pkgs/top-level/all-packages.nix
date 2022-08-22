@@ -4296,6 +4296,8 @@ with pkgs;
 
   mmctl = callPackage ../tools/misc/mmctl { };
 
+  modorganizer2-linux-installer = callPackage ../tools/games/mo2-linux-installer { };
+
   molly-brown = callPackage ../servers/gemini/molly-brown { };
 
   monetdb = callPackage ../servers/sql/monetdb { };
