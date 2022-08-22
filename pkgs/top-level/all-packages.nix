@@ -1308,6 +1308,8 @@ with pkgs;
 
   systeroid = callPackage ../tools/system/systeroid { };
 
+  tapenade = callPackage ../development/tools/tapenade { };
+
   tauon = callPackage ../applications/audio/tauon { };
 
   tere = callPackage ../tools/misc/tere { };
