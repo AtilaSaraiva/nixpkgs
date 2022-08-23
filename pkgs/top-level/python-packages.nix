@@ -10183,6 +10183,8 @@ in {
 
   sortedcontainers = callPackage ../development/python-modules/sortedcontainers { };
 
+  sotb-wrapper = callPackage ../development/python-modules/sotb-wrapper { };
+
   soundcloud-v2 = callPackage ../development/python-modules/soundcloud-v2 { };
 
   sounddevice = callPackage ../development/python-modules/sounddevice { };
