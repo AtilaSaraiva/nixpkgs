@@ -27459,6 +27459,8 @@ with pkgs;
 
   inherit (ocaml-ng.ocamlPackages_4_10) google-drive-ocamlfuse;
 
+  googerteller = callPackage ../tools/networking/googerteller { };
+
   googler = callPackage ../applications/misc/googler {
     python = python3;
   };
