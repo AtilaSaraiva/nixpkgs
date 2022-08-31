@@ -4952,6 +4952,8 @@ with pkgs;
     stdenv = gcc9Stdenv;
   };
 
+  cemu-emulator = callPackage ../applications/emulators/cemu-emulator { };
+
   cider = callPackage ../applications/audio/cider { };
 
   isolyzer = callPackage ../tools/cd-dvd/isolyzer { };
