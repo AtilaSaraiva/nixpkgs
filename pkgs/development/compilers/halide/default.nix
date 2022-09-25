@@ -9,6 +9,7 @@
 , openblas
 , blas
 , lapack
+, ninja
 }:
 
 assert blas.implementation == "openblas" && lapack.implementation == "openblas";
@@ -41,7 +42,7 @@ llvmPackages.stdenv.mkDerivation rec {
     openblas
   ];
 
-  nativeBuildInputs = [ cmake ];
+  nativeBuildInputs = [ cmake ninja ];
 
   meta = with lib; {
     description = "C++ based language for image processing and computational photography";
