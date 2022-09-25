@@ -4117,6 +4117,11 @@ in {
 
   hahomematic = callPackage ../development/python-modules/hahomematic { };
 
+  halide = toPythonModule (pkgs.halide.override {
+    inherit python;
+    enablePython = true;
+  });
+
   halo = callPackage ../development/python-modules/halo { };
 
   halohome = callPackage ../development/python-modules/halohome { };
