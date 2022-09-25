@@ -28,10 +28,14 @@ stdenv.mkDerivation rec {
     runHook preInstall
 
     export NVHPC_SILENT=true
-    export NVHPC_INSTALL_DIR=$out
+    mkdir -p $out/local
+    export NVHPC_INSTALL_DIR=$out/local
     bash ./install
     mkdir $out/bin
-    ln -s $out/Linux_x86_64/${version}/compilers/bin/* $out/bin/
+    #ln -s $out/Linux_x86_64/${version}/compilers/bin/* $out/bin/
+    mv $out/Linux_x86_64/${version}/compilers/bin/* $out/bin/
+
+    wrapProgram $out/bin/
 
     runHook postInstall
   '';
