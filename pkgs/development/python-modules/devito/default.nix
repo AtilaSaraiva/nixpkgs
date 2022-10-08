@@ -27,8 +27,8 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "devitocodes";
     repo = "devito";
-    rev = "v${version}";
-    sha256 = "sha256-crKTxlueE8NGjAqu625iFvp35UK2U7+9kl8rpbzf0gs=";
+    rev = "7827526fc8259952cec6e901ab4f188497f5950d";
+    sha256 = "sha256-eK+gDOl0++13MQl+6HuVUe1DGxFfPy+/BG6c6zvhREU=";
   };
 
   postPatch = ''
