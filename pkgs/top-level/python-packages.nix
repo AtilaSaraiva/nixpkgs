@@ -7801,6 +7801,8 @@ self: super: with self; {
 
   pygeos = callPackage ../development/python-modules/pygeos { };
 
+  pygeostat = callPackage ../development/python-modules/pygeostat { };
+
   pygetwindow = callPackage ../development/python-modules/pygetwindow { };
 
   pygit2 = callPackage ../development/python-modules/pygit2 { };
