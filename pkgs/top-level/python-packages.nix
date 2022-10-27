@@ -7236,6 +7236,8 @@ self: super: with self; {
 
   proboscis = callPackage ../development/python-modules/proboscis { };
 
+  probscale = callPackage ../development/python-modules/probscale { };
+
   process-tests = callPackage ../development/python-modules/process-tests { };
 
   proglog = callPackage ../development/python-modules/proglog { };
