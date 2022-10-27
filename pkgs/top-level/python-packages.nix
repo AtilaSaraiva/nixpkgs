@@ -10846,6 +10846,8 @@ self: super: with self; {
 
   temescal = callPackage ../development/python-modules/temescal { };
 
+  temp = callPackage ../development/python-modules/temp { };
+
   temperusb = callPackage ../development/python-modules/temperusb { };
 
   tempest = callPackage ../development/python-modules/tempest { };
