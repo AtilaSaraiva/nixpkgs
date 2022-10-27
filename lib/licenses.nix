@@ -802,6 +802,10 @@ in mkLicense lset) ({
     url = "https://prosperitylicense.com/versions/3.0.0.html";
   };
 
+  pyevtk = {
+    url = "https://github.com/pyscience-projects/pyevtk/blob/master/LICENSE.txt";
+  };
+
   qhull = {
     spdxId = "Qhull";
     fullName = "Qhull License";
