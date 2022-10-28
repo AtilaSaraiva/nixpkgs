@@ -4005,6 +4005,8 @@ self: super: with self; {
     inherit (pkgs.darwin.apple_sdk.frameworks) GSS;
   };
 
+  gstools = callPackage ../development/python-modules/gstools { };
+
   gst-python = callPackage ../development/python-modules/gst-python {
     # inherit (pkgs) meson won't work because it won't be spliced
     inherit (pkgs.buildPackages) meson;
