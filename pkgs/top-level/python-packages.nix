@@ -4089,6 +4089,8 @@ self: super: with self; {
 
   hangups = callPackage ../development/python-modules/hangups { };
 
+  hankel = callPackage ../development/python-modules/hankel { };
+
   hap-python = callPackage ../development/python-modules/hap-python { };
 
   hass-nabucasa = callPackage ../development/python-modules/hass-nabucasa { };
