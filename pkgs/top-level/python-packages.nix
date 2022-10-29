@@ -3044,6 +3044,8 @@ self: super: with self; {
 
   exrex = callPackage ../development/python-modules/exrex { };
 
+  extension-helpers = callPackage ../development/python-modules/extension-helpers { };
+
   extractcode = callPackage ../development/python-modules/extractcode { };
 
   extractcode-7z = callPackage ../development/python-modules/extractcode/7z.nix {
