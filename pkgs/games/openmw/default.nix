@@ -20,6 +20,8 @@
   recastnavigation,
   unshield,
   yaml-cpp,
+  qt5,
+  opencollada
 }:
 
 let
@@ -66,30 +68,34 @@ let
 in
 stdenv.mkDerivation rec {
   pname = "openmw";
-  version = "0.48.0";
+  version = "0.49.0";
 
   src = fetchFromGitLab {
     owner = "OpenMW";
     repo = "openmw";
-    rev = "${pname}-${version}";
-    hash = "sha256-zkjVt3GfQZsFXl2Ht3lCuQtDMYQWxhdFO4aGSb3rsyo=";
+    rev = "openmw-49-rc7";
+    hash = "sha256-ob1mkwEwEnceAEDMb/pEwpJmO9RNxeH/RmQsHRvpiZc=";
   };
 
-  patches = [ ./0001-function-inclusion-fixes-for-gcc14.patch ];
+  # patches = [ ./0001-function-inclusion-fixes-for-gcc14.patch ];
 
-  postPatch =
-    ''
-      sed '1i#include <memory>' -i components/myguiplatform/myguidatamanager.cpp # gcc12
-    ''
-    + lib.optionalString stdenv.hostPlatform.isDarwin ''
-      # Don't fix Darwin app bundle
-      sed -i '/fixup_bundle/d' CMakeLists.txt
-    '';
+  # postPatch =
+  #   ''
+  #     sed '1i#include <memory>' -i components/myguiplatform/myguidatamanager.cpp # gcc12
+  #   ''
+  #   + lib.optionalString stdenv.hostPlatform.isDarwin ''
+  #     # Don't fix Darwin app bundle
+  #     sed -i '/fixup_bundle/d' CMakeLists.txt
+  #   '';
 
   nativeBuildInputs = [
     cmake
     pkg-config
     wrapQtAppsHook
+    qt5.qtbase
+    qt5.qttools
+    mygui
+    opencollada
   ];
 
   # If not set, OSG plugin .so files become shell scripts on Darwin.
