@@ -20,17 +20,17 @@ let
 in
 stdenv.mkDerivation rec {
   pname = "mygui";
-  version = "3.4.2";
+  version = "3.4.3";
 
   src = fetchFromGitHub {
     owner = "MyGUI";
     repo = "mygui";
     rev = "MyGUI${version}";
-    hash = "sha256-yBV0ImOFJlqBPqqOjXYe4SFO2liSGZCEwvehED5Ubj4=";
+    hash = "sha256-qif9trHgtWpYiDVXY3cjRsXypjjjgStX8tSWCnXhXlk=";
   };
 
   patches = [
-    ./disable-framework.patch
+    # ./disable-framework.patch
   ];
 
   nativeBuildInputs = [
@@ -61,6 +61,9 @@ stdenv.mkDerivation rec {
     "-DMYGUI_BUILD_TOOLS=OFF"
     "-DMYGUI_BUILD_DEMOS=OFF"
     "-DMYGUI_RENDERSYSTEM=${renderSystem}"
+    "-DCMAKE_VISIBILITY_INLINES_HIDDEN=OFF"
+    "-DCMAKE_CXX_VISIBILITY_PRESET=default"
+    "-DMYGUI_DONT_USE_OBSOLETE=ON"
   ];
 
   meta = with lib; {
